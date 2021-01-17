@@ -8,3 +8,7 @@ Use cases:
 ## Quick Start
 
 You can find a distribution of this project located at `build/jargon.js`
+
+## Notes
+
+- This library is by no means lightweight, due to the built-in wordlists. As of right now, the build is around 3MB in size.
