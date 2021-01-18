@@ -3,6 +3,7 @@
 """
 
 from datetime import datetime
+import shutil
 
 
 def indent(source, width=4):
@@ -36,3 +37,5 @@ window.Jargon = Jargon;
     )
 
     fl.write(output)
+
+shutil.copy("build/jargon.js", "docs/jargon.demo_build.js");

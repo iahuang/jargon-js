@@ -36,7 +36,7 @@ namespace Jargon {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    export class ProgramGenerator {
+    export class CodeGenerator {
         params: GenerationParameters;
         globalVars: string[] = [];
 
@@ -61,8 +61,15 @@ namespace Jargon {
 
             return type;
         }
+
         randomName() {
             let name = randomItem(VAR_TERMS);
+
+            // make sure the name doesn't start with a number; most programming languages
+            // don't allow this
+            while ("0123456789".includes(name[0])) {
+                name = randomItem(VAR_TERMS);
+            }
 
             while (
                 name.length < this.params.maxNameLength &&
