@@ -27,6 +27,7 @@ with open("build/jargon.js", "w") as fl:
 
 (function() {{
 {2}
+window.Jargon = Jargon;
 }})();
 """.format(
         datetime.now().year,

@@ -9,6 +9,17 @@ abstract class ASTNode {
     abstract dump(): string;
 }
 
+class ProgramRootNode {
+    body: ASTNode[];
+    constructor(body: ASTNode[]) {
+        this.body = body;
+    }
+
+    dump() {
+        return this.body.map(node=>node.dump()).join("\n");
+    }
+}
+
 class ArgumentNode extends ASTNode {
     type: string;
     name: string;
@@ -128,5 +139,77 @@ class BranchNode extends ASTNode {
         }
 
         return output;
+    }
+}
+
+class BinOpNode extends ASTNode {
+    a: ASTNode;
+    b: ASTNode;
+    op: string;
+    constructor(a: ASTNode, b: ASTNode, op: string) {
+        super();
+        this.a = a;
+        this.b = b;
+        this.op = op;
+    }
+
+    dump() {
+        return `${this.a} ${this.op} ${this.b}`;
+    }
+}
+
+class VarDecl extends ASTNode {
+    type: string;
+    name: string;
+    assignment?: ASTNode;
+
+    constructor(type: string, name: string, assignment?: ASTNode) {
+        super();
+        this.type = type;
+        this.name = name;
+        this.assignment = assignment;
+    }
+
+    dump() {
+        if (this.assignment) {
+            return `${this.type} ${this.name} = ${this.assignment.dump()};`;
+        } else {
+            return `${this.type} ${this.name};`;
+        }
+        
+    }
+}
+
+class DefineMacroNode extends ASTNode {
+    macroName: string;
+    value: ASTNode;
+
+    constructor (macroName: string, value: ASTNode) {
+        super();
+        this.macroName = macroName;
+        this.value = value;
+    }
+
+    dump() {
+        return `#define ${this.macroName} ${this.value.dump()}`;
+    }
+}
+
+class AtomicNode extends ASTNode {
+    value: string;
+
+    constructor (value: string) {
+        super();
+        this.value = value;
+    }
+
+    dump() {
+        return this.value;
+    }
+}
+
+class SpacerNode extends ASTNode {
+    dump () {
+        return "";
     }
 }

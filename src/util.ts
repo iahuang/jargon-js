@@ -7,7 +7,7 @@ class RandomSampler {
 
     }
 
-    add(choice: any, weight: number) {
+    add(choice: any, weight: number = 1) {
         this.choices.push(choice);
         this.weights.push(weight);
 
