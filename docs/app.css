@@ -24,3 +24,23 @@ a:visited, a {
 h1 {
     font-family: monospace;
 }
+
+.meta {
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+    display: block;
+    font-size: 14pt;
+}
+
+.meta > * {
+    display: inline-block;
+}
+
+#filename {
+
+}
+
+pre {
+    margin: 0;
+}

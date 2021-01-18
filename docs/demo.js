@@ -20,6 +20,8 @@ ${code}
 </pre>
     `;
 
+    document.getElementById("filename").innerText = '"'+codeGen.randomName()+".c\"";
+
     updateHighlighting();
 }
 
