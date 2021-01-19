@@ -364,9 +364,6 @@
                     fnode.body.push(new SpacerNode());
                 }
                 fnode.body.push(...this.randomBody());
-                if (functionShouldReturn) {
-                    fnode.body.push(new ReturnNode(this.randomExpression()));
-                }
                 return fnode;
             }
             randomAtomic(possibleNames) {

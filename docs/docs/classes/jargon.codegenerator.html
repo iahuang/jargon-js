@@ -91,6 +91,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="jargon.codegenerator.html#currargs" class="tsd-kind-icon">curr<wbr>Args</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="jargon.codegenerator.html#currlocalvars" class="tsd-kind-icon">curr<wbr>Local<wbr>Vars</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="jargon.codegenerator.html#externalfunctions" class="tsd-kind-icon">external<wbr>Functions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="jargon.codegenerator.html#globalvars" class="tsd-kind-icon">global<wbr>Vars</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="jargon.codegenerator.html#params" class="tsd-kind-icon">params</a></li>
 							</ul>
@@ -98,6 +99,7 @@
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="jargon.codegenerator.html#alllocalsymbols" class="tsd-kind-icon">all<wbr>Local<wbr>Symbols</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="jargon.codegenerator.html#allusablesymbols" class="tsd-kind-icon">all<wbr>Usable<wbr>Symbols</a></li>
 							</ul>
 						</section>
@@ -106,12 +108,14 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomatomic" class="tsd-kind-icon">random<wbr>Atomic</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randombody" class="tsd-kind-icon">random<wbr>Body</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randombodynode" class="tsd-kind-icon">random<wbr>Body<wbr>Node</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomcondition" class="tsd-kind-icon">random<wbr>Condition</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomconstname" class="tsd-kind-icon">random<wbr>Const<wbr>Name</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomexpression" class="tsd-kind-icon">random<wbr>Expression</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomfunction" class="tsd-kind-icon">random<wbr>Function</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomliteralstring" class="tsd-kind-icon">random<wbr>Literal<wbr>String</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomname" class="tsd-kind-icon">random<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomnameatomic" class="tsd-kind-icon">random<wbr>Name<wbr>Atomic</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomnodeoftype" class="tsd-kind-icon">random<wbr>Node<wbr>OfType</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomprogram" class="tsd-kind-icon">random<wbr>Program</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="jargon.codegenerator.html#randomtype" class="tsd-kind-icon">random<wbr>Type</a></li>
 							</ul>
@@ -131,7 +135,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L62">main.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L84">main.ts:84</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -153,7 +157,7 @@
 					<div class="tsd-signature tsd-kind-icon">curr<wbr>Args<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L53">main.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L62">main.ts:62</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -163,7 +167,17 @@
 					<div class="tsd-signature tsd-kind-icon">curr<wbr>Local<wbr>Vars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L52">main.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L61">main.ts:61</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="externalfunctions" class="tsd-anchor"></a>
+					<h3>external<wbr>Functions</h3>
+					<div class="tsd-signature tsd-kind-icon">external<wbr>Functions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ExternalFunction</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L67">main.ts:67</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -173,7 +187,7 @@
 					<div class="tsd-signature tsd-kind-icon">global<wbr>Vars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L51">main.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L60">main.ts:60</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -183,13 +197,30 @@
 					<div class="tsd-signature tsd-kind-icon">params<span class="tsd-signature-symbol">:</span> <a href="jargon.generationparameters.html" class="tsd-signature-type" data-tsd-kind="Class">GenerationParameters</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L49">main.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L58">main.ts:58</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="alllocalsymbols" class="tsd-anchor"></a>
+					<h3>all<wbr>Local<wbr>Symbols</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> allLocalSymbols<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L78">main.ts:78</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
 					<a name="allusablesymbols" class="tsd-anchor"></a>
 					<h3>all<wbr>Usable<wbr>Symbols</h3>
@@ -200,7 +231,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L55">main.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L69">main.ts:69</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -220,7 +251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L153">main.ts:153</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L186">main.ts:186</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -237,30 +268,13 @@
 					<a name="randombody" class="tsd-anchor"></a>
 					<h3>random<wbr>Body</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">random<wbr>Body<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Body<span class="tsd-signature-symbol">(</span>depth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ASTNode</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L191">main.ts:191</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="randombodynode" class="tsd-anchor"></a>
-					<h3>random<wbr>Body<wbr>Node</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">random<wbr>Body<wbr>Node<span class="tsd-signature-symbol">(</span>depth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BinOpNode</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L195">main.ts:195</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L224">main.ts:224</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -269,7 +283,24 @@
 									<h5>depth: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BinOpNode</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ASTNode</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="randomcondition" class="tsd-anchor"></a>
+					<h3>random<wbr>Condition</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Condition<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BinOpNode</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L248">main.ts:248</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BinOpNode</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -283,10 +314,39 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L104">main.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L126">main.ts:126</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="randomexpression" class="tsd-anchor"></a>
+					<h3>random<wbr>Expression</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Expression<span class="tsd-signature-symbol">(</span>depth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, booleanExpression<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, allowNumericLiterals<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ASTNode</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L259">main.ts:259</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>depth: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+								</li>
+								<li>
+									<h5>booleanExpression: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+								<li>
+									<h5>allowNumericLiterals: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ASTNode</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -300,7 +360,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L116">main.ts:116</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L144">main.ts:144</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">FunctionNode</span></h4>
@@ -317,7 +377,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L179">main.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L212">main.ts:212</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -334,7 +394,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L86">main.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L108">main.ts:108</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -351,7 +411,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L169">main.ts:169</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L202">main.ts:202</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -365,6 +425,32 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="randomnodeoftype" class="tsd-anchor"></a>
+					<h3>random<wbr>Node<wbr>OfType</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Node<wbr>OfType<span class="tsd-signature-symbol">(</span>nodeType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, depth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ASTNode</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L317">main.ts:317</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>nodeType: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>depth: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ASTNode</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="randomprogram" class="tsd-anchor"></a>
 					<h3>random<wbr>Program</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -374,7 +460,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L232">main.ts:232</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L356">main.ts:356</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ProgramRootNode</span></h4>
@@ -391,7 +477,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/0775909/src/main.ts#L68">main.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/iahuang/jargon-js/blob/2e18a51/src/main.ts#L90">main.ts:90</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -428,10 +514,16 @@
 								<a href="jargon.codegenerator.html#currlocalvars" class="tsd-kind-icon">curr<wbr>Local<wbr>Vars</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="jargon.codegenerator.html#externalfunctions" class="tsd-kind-icon">external<wbr>Functions</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="jargon.codegenerator.html#globalvars" class="tsd-kind-icon">global<wbr>Vars</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="jargon.codegenerator.html#params" class="tsd-kind-icon">params</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="jargon.codegenerator.html#alllocalsymbols" class="tsd-kind-icon">all<wbr>Local<wbr>Symbols</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="jargon.codegenerator.html#allusablesymbols" class="tsd-kind-icon">all<wbr>Usable<wbr>Symbols</a>
@@ -443,10 +535,13 @@
 								<a href="jargon.codegenerator.html#randombody" class="tsd-kind-icon">random<wbr>Body</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="jargon.codegenerator.html#randombodynode" class="tsd-kind-icon">random<wbr>Body<wbr>Node</a>
+								<a href="jargon.codegenerator.html#randomcondition" class="tsd-kind-icon">random<wbr>Condition</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="jargon.codegenerator.html#randomconstname" class="tsd-kind-icon">random<wbr>Const<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="jargon.codegenerator.html#randomexpression" class="tsd-kind-icon">random<wbr>Expression</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="jargon.codegenerator.html#randomfunction" class="tsd-kind-icon">random<wbr>Function</a>
@@ -459,6 +554,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="jargon.codegenerator.html#randomnameatomic" class="tsd-kind-icon">random<wbr>Name<wbr>Atomic</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="jargon.codegenerator.html#randomnodeoftype" class="tsd-kind-icon">random<wbr>Node<wbr>OfType</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="jargon.codegenerator.html#randomprogram" class="tsd-kind-icon">random<wbr>Program</a>
