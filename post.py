@@ -38,4 +38,5 @@ window.Jargon = Jargon;
 
     fl.write(output)
 
+# make a copy of the build for the demo
 shutil.copy("build/jargon.js", "docs/jargon.demo_build.js");

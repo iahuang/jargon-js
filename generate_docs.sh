@@ -1,0 +1,1 @@
+npx typedoc src/main.ts --out ./docs/docs

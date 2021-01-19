@@ -8,6 +8,10 @@ let params = Jargon.GenerationParameters.default();
 let codeGen = new Jargon.CodeGenerator(params);
 let codeContainer = document.getElementById("main");
 
+function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 function generateNew() {
     // generate program and dump contents into a string
     let code = codeGen.randomProgram().dump();
@@ -15,7 +19,7 @@ function generateNew() {
     codeContainer.innerHTML = `
 <pre>
 <code class="language-c">
-${code}
+${htmlEntities(code)}
 </code>
 </pre>
     `;

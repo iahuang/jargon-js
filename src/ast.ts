@@ -42,10 +42,21 @@ abstract class ContainerNode extends ASTNode {
         super();
         this.body = body;
     }
-
+    addSemicolon(line: string) {
+        if (!(line.endsWith("{") || line.endsWith("}") || line.endsWith(",") || line=="")) {
+            return line+";";
+        }
+        return line;
+    }
     // don't take out of context
     dumpBody() {
-        return indentBody(this.body.map((node) => node.dump()).join("\n"));
+        return indentBody(
+            this.body
+                .map((node) => {
+                    return this.addSemicolon(node.dump());
+                })
+                .join("\n")
+        );
     }
 }
 
@@ -127,7 +138,7 @@ class BranchNode extends ASTNode {
                 ` else if (${elseIfClause.condition.dump()}) {`,
                 elseIfClause.dumpBody(),
                 `}`
-            ];
+            ].join("\n");
         }
 
         if (this.elseClause) {
@@ -135,7 +146,7 @@ class BranchNode extends ASTNode {
                 ` else {`,
                 this.elseClause.dumpBody(),
                 `}`
-            ];
+            ].join("\n");
         }
 
         return output;
@@ -154,7 +165,7 @@ class BinOpNode extends ASTNode {
     }
 
     dump() {
-        return `${this.a} ${this.op} ${this.b}`;
+        return `${this.a.dump()} ${this.op} ${this.b.dump()}`;
     }
 }
 
@@ -172,11 +183,24 @@ class VarDecl extends ASTNode {
 
     dump() {
         if (this.assignment) {
-            return `${this.type} ${this.name} = ${this.assignment.dump()};`;
+            return `${this.type} ${this.name} = ${this.assignment.dump()}`;
         } else {
-            return `${this.type} ${this.name};`;
+            return `${this.type} ${this.name}`;
         }
         
+    }
+}
+
+class IncludeMacroNode extends ASTNode {
+    path: string;
+
+    constructor (path: string) {
+        super();
+        this.path = path;
+    }
+
+    dump() {
+        return "#include <"+this.path+">";
     }
 }
 
@@ -211,5 +235,68 @@ class AtomicNode extends ASTNode {
 class SpacerNode extends ASTNode {
     dump () {
         return "";
+    }
+}
+
+class DereferenceNode extends ASTNode {
+    target: ASTNode;
+    constructor (target: ASTNode) {
+        super();
+        this.target = target;
+    }
+
+    dump() {
+        // return *foo instead of *(foo) when possible
+        if (this.target instanceof AtomicNode) {
+            return "*"+this.target.dump();
+        } else {
+            return `*(${this.target.dump()})`;
+        }
+    }
+}
+
+
+class ReferenceNode extends ASTNode {
+    target: ASTNode;
+    constructor (target: ASTNode) {
+        super();
+        this.target = target;
+    }
+
+    dump() {
+        // return &foo instead of &(foo) when possible
+        if (this.target instanceof AtomicNode) {
+            return "&"+this.target.dump();
+        } else {
+            return `&(${this.target.dump()})`;
+        }
+    }
+}
+
+class FunctionCallNode extends ASTNode {
+    name: string;
+    args: ASTNode[];
+
+    constructor(name: string, args: ASTNode[]) {
+        super();
+        this.name = name;
+        this.args = args;
+    }
+
+    dump() {
+        return `${this.name}(${this.args.map(arg=>arg.dump()).join(", ")})`;
+    }
+}
+
+class ReturnNode extends ASTNode {
+    value: ASTNode;
+
+    constructor(value: ASTNode) {
+        super();
+        this.value = value;
+    }
+
+    dump() {
+        return "return "+this.value.dump();
     }
 }
